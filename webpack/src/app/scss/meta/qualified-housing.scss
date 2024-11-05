@@ -1,0 +1,112 @@
+.meta-selection-wrapper {
+    padding: 12px 0 ;
+
+    .search-filter-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 20px;
+        border: 1px solid;
+        margin-top: 10px;
+        padding: 16px;
+        font-size: 16px;
+        select#preferences-filter {
+            width: 100%;
+            padding: 4px 8px;
+        }
+    
+        .search-container {
+            input {
+                border-radius: 0;
+                border: none !important;
+                width: 100%;
+                outline: none !important; // Ensures no outline appears on focus
+    
+                // Add the focus styles for WebKit browsers
+                &:focus {
+                    border: none !important;
+                    outline: none !important;
+                    box-shadow: none !important;
+                }
+    
+                // Additional browser-specific styles for input focus
+                &:focus::-webkit-input-placeholder {
+                    outline: none !important;
+                    box-shadow: none !important;
+                }
+    
+                &::-moz-focus-inner {
+                    border: 0 !important;
+                    box-shadow: none !important;
+                }
+            }
+        }
+    }
+
+ .selection-row{
+  height: 260px;
+  display: none;
+
+     &.active{
+         display: grid;
+     }
+    grid-template-columns: repeat(2, 1fr);
+    .selection{
+        @apply bg-gray-100;
+       
+    }
+    
+    .selection, .chosen {
+        height: 100%;
+        overflow-y: scroll;
+        // this plus it's sibling .chosen height should be 100%
+        
+        .choice-item, .chosen-item{
+             padding: 10px;
+            font-size: 14px;
+            
+            cursor: pointer;
+            display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition:  background-color 0.3s;
+            &:hover{
+                // wordpress blue
+                background-color: #0073aa;
+                color: white;
+            }
+
+            .cancel-button {
+                width: 24px;
+                height: 24px;
+            //    wordpress cancel background color
+                background-color: #a00;
+
+                color: #fff;
+                border-radius: 99999999px;
+                font-size: 14px;
+                opacity: 0;
+                transition:  background-color 0.3s;
+                @apply flex items-center justify-center;
+            }
+
+            &:hover .cancel-button{
+                opacity: 1;
+            }
+
+
+        }
+        padding: 24px;
+
+        .choice-item.disabled{
+            background-color: #f1f1f1;
+            color: #a0a0a0;
+            cursor: not-allowed;
+        }
+    }
+
+    
+ }
+
+ 
+}

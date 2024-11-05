@@ -1,0 +1,82 @@
+//  add tailwind css
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import './meta/qualified-housing.scss';
+
+.housing-option-preference {
+  margin-left: 6px;
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+}
+
+
+.housing-field-option input {
+  cursor: pointer;
+}
+
+.housing-field-option.wrapper {
+  margin-bottom: 12px;
+}
+
+.housing-options-hr{
+ width: 100%;
+ height: 1px;
+ background-color: #dad5d5;
+ margin: 12px 0 8px;
+}
+
+.housing-field-option{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.housing-option-preference .housing-field-option{
+  margin-bottom: 12px;
+}
+
+
+.housing-options-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+
+div#landing-page-options {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  padding: 1rem;
+}
+
+
+.housing-option.wrapper{
+  margin-top: 28px;
+  border: 1px solid;
+  padding: 1rem;
+}
+
+
+.meta-field-option {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 6px;
+
+  input{
+    width: 100%;
+    margin: 8px 0;
+    padding: inherit;
+  }
+}
+
+.meta-field-option textarea {
+  height: 125px;
+  padding: 20px;
+  overflow-y: scroll;
+}
